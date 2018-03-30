@@ -1,8 +1,6 @@
-# Deep Confluence
+# Deep Confluence 🖤
 
-> Merges objects—deeply 🖤
-
-Deep Confluence is a Javascript Utility Method to deeply merge objects. It is not intended to change lives, be better than other deep merge utilities, or s**t on the code you wrote yesterday.
+Deep Confluence is a Javascript Utility Method to deeply merge objects.
 
 Where other deep merge utilities might take a bit to groc for the simple function you desire, you can view Deep Confluence's few lines of code and feel at ease saying "yes" **OR** "no"—but, say "yes".
 
@@ -35,4 +33,3 @@ const lonelyObj2 = {
 const youreNotAlone = deepCongluence(lonelyObj1, lonelyObj2) // 🖤🖤
 ```
 
-## Fin
