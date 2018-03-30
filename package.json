@@ -29,6 +29,10 @@
   },
   "homepage": "https://github.com/yowainwright/deep-confluence#readme",
   "devDependencies": {
-    "jest": "^22.4.3"
+    "codecov": "^3.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-dollarshaveclub": "^3.1.0",
+    "jest": "^22.4.3",
+    "rollup": "^0.57.1"
   }
 }
