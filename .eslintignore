@@ -1,0 +1,5 @@
+dist/*
+tmp/*
+.nyc_output
+coverage
+scripts/

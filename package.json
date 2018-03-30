@@ -3,8 +3,15 @@
   "version": "0.0.1",
   "description": "Merge objects—deeply 🖤",
   "main": "index.js",
+  "module": "dist/deep-confluence.es.js",
+  "unpkg": "dist/deep-confluence.min.js",
   "scripts": {
-    "test": "test"
+    "ci:lint": "eslint .",
+    "lint": "eslint . --fix",
+    "start": "nvm i && npm i",
+    "test": "jest --coverage",
+    "build": "rollup --config rollup.config.js",
+    "release-ready": "npm run lint && npm run build && npm test"
   },
   "repository": {
     "type": "git",
@@ -29,10 +36,19 @@
   },
   "homepage": "https://github.com/yowainwright/deep-confluence#readme",
   "devDependencies": {
+    "@babel/core": "^7.0.0-beta.42",
+    "@babel/preset-env": "^7.0.0-beta.42",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^22.4.3",
     "codecov": "^3.0.0",
     "eslint": "^4.19.1",
     "eslint-config-dollarshaveclub": "^3.1.0",
     "jest": "^22.4.3",
-    "rollup": "^0.57.1"
+    "rollup": "^0.57.1",
+    "rollup-plugin-babel": "^4.0.0-beta.2",
+    "rollup-plugin-uglify": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=7"
   }
 }

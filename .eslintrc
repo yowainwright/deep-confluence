@@ -1,0 +1,7 @@
+{
+  "extends": "dollarshaveclub",
+  "globals": {
+    "expect": true,
+    "test": true,
+  }
+}

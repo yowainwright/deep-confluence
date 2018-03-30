@@ -1,4 +1,4 @@
-import deepConfluence from './index.js'
+import deepConfluence from '../index.js'
 
 // current deep-extend test
 const testDeeply = [
@@ -17,12 +17,12 @@ const testDeeply = [
       complex: {
         noPets: true,
         likesCats: true,
-      }
+      },
     },
-    expected: '',
+    expected: { 'alone': false, 'broken': false, 'complex': { 'cats': true, 'dogs': false, 'likesCats': true, 'noPets': true } },
   },
 ]
-testObjects.forEach(obj => {
+testDeeply.forEach(obj => {
   test(`deep-extend, test ${obj}`, () => {
     const result = deepConfluence(obj.lonelyObj1, obj.lonelyObj2)
     expect(result).toEqual(obj.expected)
