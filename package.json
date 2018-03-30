@@ -1,6 +1,6 @@
 {
   "name": "deep-confluence",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Merge objects—deeply 🖤",
   "main": "index.js",
   "module": "dist/deep-confluence.es.js",
@@ -19,15 +19,11 @@
   },
   "keywords": [
     "deep",
-    "deep",
+    "deep merge",
+    "deep extend",
     "merge",
-    "deep",
-    "extend",
-    "merge",
-    "object",
-    "assignment",
-    "object",
-    "assign"
+    "object assignment",
+    "object assign"
   ],
   "author": "Jeff Wainwright <yowainwright@gmail.com> (https://jeffry.in)",
   "license": "MIT",
