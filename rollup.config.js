@@ -5,7 +5,7 @@ import {
   description,
   homepage,
   license,
-  main,
+  unpkg,
   module,
   name,
   version,
@@ -13,7 +13,7 @@ import {
 
 const uglifyOutput = {
   output: {
-    comments: function (node, comment) {
+    comments: (node, comment) => {
       const text = comment.value
       const type = comment.type
       if (type === 'comment2') {
@@ -26,7 +26,7 @@ const uglifyOutput = {
 
 const babelSetup = {
   babelrc: false,
-  presets: [['@babel/preset-env', { modules: false}]],
+  presets: [['@babel/preset-env', { modules: false }]],
   exclude: 'node_modules/**',
 }
 
@@ -60,14 +60,6 @@ const createConfig = ({ input, output, env } = {}) => {
 export default [
   createConfig({
     input: 'index.js',
-    output: [{ file: main, format: 'cjs' }, { file: module, format: 'es' }],
-  }),
-  createConfig({
-    input: 'index.js',
-    output: {
-      file: 'dist/deep-confluence.min.js',
-      format: 'umd',
-    },
-    env: 'production',
+    output: [{ file: unpkg, format: 'umd' }, { file: module, format: 'es' }],
   }),
 ]
