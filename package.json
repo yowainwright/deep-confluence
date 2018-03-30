@@ -6,8 +6,8 @@
   "module": "dist/deep-confluence.es.js",
   "unpkg": "dist/deep-confluence.min.js",
   "scripts": {
-    "ci:lint": "eslint .",
     "lint": "eslint . --fix",
+    "lint:ci": "eslint .",
     "start": "nvm i && npm i",
     "test": "jest --coverage",
     "build": "rollup --config rollup.config.js",
