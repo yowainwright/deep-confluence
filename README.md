@@ -35,5 +35,18 @@ const lonelyObj2 = {
 }
 
 const youreNotAlone = deepCongluence(lonelyObj1, lonelyObj2) // 🖤🖤
+
+// outputs
+{
+  'alone': false,
+  'broken': false,
+  'complex': {
+    'cats': true,
+    'dogs': false,
+    'likesCats': true,
+    'noPets': true
+  }
+}
+
 ```
 ----

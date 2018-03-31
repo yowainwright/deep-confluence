@@ -5,8 +5,8 @@ export default function deepExtend (obj = {}, ...args) {
       const piece = item[prop]
       obj[prop] = typeof piece === 'object'
         // merge new {object}
-        ? obj[prop] = deepExtend(obj[prop], piece)
-        : obj[prop] = piece
+        ? deepExtend(obj[prop], piece)
+        : piece
     }
   })
   return obj
