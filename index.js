@@ -1,12 +1,12 @@
-export default function deepExtend (obj = {}, ...args) {
+export default function deepConfluence (obj = {}, ...args) {
   args.forEach(item => {
     // iterate {item} properties
     for (const prop in item) {
       const piece = item[prop]
       obj[prop] = typeof piece === 'object'
         // merge new {object}
-        ? obj[prop] = deepExtend(obj[prop], piece)
-        : obj[prop] = piece
+        ? deepConfluence(obj[prop], piece)
+        : piece
     }
   })
   return obj
