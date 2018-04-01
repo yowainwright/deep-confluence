@@ -21,6 +21,56 @@ const testDeeply = [
     },
     expected: { 'alone': false, 'broken': false, 'complex': { 'cats': true, 'dogs': false, 'likesCats': true, 'noPets': true } },
   },
+  {
+    lonelyObj1: {
+      broken: true,
+      alone: true,
+      complex: {
+        cats: true,
+        dogs: false,
+      },
+      likes: [
+        'walks',
+        'talks',
+      ],
+    },
+    lonelyObj2: {
+      broken: false,
+      alone: false,
+      complex: {
+        noPets: true,
+        likesCats: true,
+      },
+    },
+    expected: { 'alone': false, 'broken': false, 'complex': { 'cats': true, 'dogs': false, 'likesCats': true, 'noPets': true }, 'likes': ['walks', 'talks'] },
+  },
+  {
+    lonelyObj1: {
+      broken: true,
+      alone: true,
+      complex: {
+        cats: true,
+        dogs: false,
+      },
+      likes: [
+        'walks',
+        'talks',
+      ],
+    },
+    lonelyObj2: {
+      broken: false,
+      alone: false,
+      complex: {
+        noPets: true,
+        likesCats: true,
+      },
+      likes: [
+        'jumping',
+        'running',
+      ],
+    },
+    { "alone": false, "broken": false, "complex": { "cats": true, "dogs": false, "likesCats": true, "noPets": true }, "likes": ["jumping", "running"] },
+  },
 ]
 testDeeply.forEach(obj => {
   test(`deep-extend, test ${obj}`, () => {
