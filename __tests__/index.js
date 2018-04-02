@@ -15,16 +15,42 @@ const testDeeply = [
       broken: false,
       alone: false,
       complex: {
-        noPets: true,
         likesCats: true,
       },
     },
-    expected: { 'alone': false, 'broken': false, 'complex': { 'cats': true, 'dogs': false, 'likesCats': true, 'noPets': true } },
+    expected: { 'alone': false, 'broken': false, 'complex': { 'cats': true, 'dogs': false, 'likesCats': true } },
+  },
+  {
+    lonelyObj1: {
+      bummed: true,
+      depressed: true,
+      complex: {
+        cats: false,
+        dogs: true,
+      },
+      likes: [
+        'home',
+        'yoga',
+      ],
+    },
+    lonelyObj2: {
+      bummed: false,
+      depressed: false,
+      complex: {
+        likesDogs: true,
+      },
+      likes: [
+        'home',
+        'yoga',
+      ],
+    },
+    expected: { 'bummed': false, 'depressed': false, 'complex': { 'cats': false, 'dogs': true, 'likesDogs': true }, 'likes': ['home', 'yoga'] },
   },
 ]
 testDeeply.forEach(obj => {
   test(`deep-extend, test ${obj}`, () => {
     const result = deepConfluence(obj.lonelyObj1, obj.lonelyObj2)
+
     expect(result).toEqual(obj.expected)
   })
 })
