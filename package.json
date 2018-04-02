@@ -1,6 +1,6 @@
 {
   "name": "deep-confluence",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Merge objects—deeply 🖤",
   "main": "index.js",
   "module": "dist/deep-confluence.es.js",

@@ -15,66 +15,42 @@ const testDeeply = [
       broken: false,
       alone: false,
       complex: {
-        noPets: true,
         likesCats: true,
       },
     },
-    expected: { 'alone': false, 'broken': false, 'complex': { 'cats': true, 'dogs': false, 'likesCats': true, 'noPets': true } },
+    expected: { 'alone': false, 'broken': false, 'complex': { 'cats': true, 'dogs': false, 'likesCats': true } },
   },
   {
     lonelyObj1: {
-      broken: true,
-      alone: true,
+      bummed: true,
+      depressed: true,
       complex: {
-        cats: true,
-        dogs: false,
+        cats: false,
+        dogs: true,
       },
       likes: [
-        'walks',
-        'talks',
+        'home',
+        'yoga',
       ],
     },
     lonelyObj2: {
-      broken: false,
-      alone: false,
+      bummed: false,
+      depressed: false,
       complex: {
-        noPets: true,
-        likesCats: true,
-      },
-    },
-    expected: { 'alone': false, 'broken': false, 'complex': { 'cats': true, 'dogs': false, 'likesCats': true, 'noPets': true }, 'likes': ['walks', 'talks'] },
-  },
-  {
-    lonelyObj1: {
-      broken: true,
-      alone: true,
-      complex: {
-        cats: true,
-        dogs: false,
+        likesDogs: true,
       },
       likes: [
-        'walks',
-        'talks',
+        'home',
+        'yoga',
       ],
     },
-    lonelyObj2: {
-      broken: false,
-      alone: false,
-      complex: {
-        noPets: true,
-        likesCats: true,
-      },
-      likes: [
-        'jumping',
-        'running',
-      ],
-    },
-    { "alone": false, "broken": false, "complex": { "cats": true, "dogs": false, "likesCats": true, "noPets": true }, "likes": ["jumping", "running"] },
+    expected: { 'bummed': false, 'depressed': false, 'complex': { 'cats': false, 'dogs': true, 'likesDogs': true }, 'likes': ['home', 'yoga'] },
   },
 ]
 testDeeply.forEach(obj => {
   test(`deep-extend, test ${obj}`, () => {
     const result = deepConfluence(obj.lonelyObj1, obj.lonelyObj2)
+
     expect(result).toEqual(obj.expected)
   })
 })
