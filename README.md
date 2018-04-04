@@ -1,3 +1,6 @@
+![Deep Confluence](https://jeffry.in/deep-confluence/deep-confluence.svg)
+
+
 # Deep Confluence 🖤
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/yowainwright/deep-confluence.svg)](https://greenkeeper.io/)
