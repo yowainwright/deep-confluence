@@ -1,19 +1,15 @@
 ![Deep Confluence](https://jeffry.in/deep-confluence/deep-confluence.svg)
 
-----
+# Deep Confluence [![Greenkeeper badge](https://badges.greenkeeper.io/yowainwright/deep-confluence.svg)](https://greenkeeper.io/)
+[![codecov](https://codecov.io/gh/yowainwright/deep-confluence/branch/master/graph/badge.svg)](https://codecov.io/gh/yowainwright/deep-confluence)
 
-# Deep Confluence 🖤
-
-### Deep Confluence is a Javascript Utility Method to deeply merge objects.
-
-----
+## A Javascript Utility Method to deeply merge objects
 
 Where other deep merge utilities might take a bit to groc for the simple function you desire, you can view Deep Confluence's few lines of code and feel at ease saying "yes" **OR** "no"—but, say "yes".
 
 ----
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/yowainwright/deep-confluence.svg)](https://greenkeeper.io/)
-[![codecov](https://codecov.io/gh/yowainwright/deep-confluence/branch/master/graph/badge.svg)](https://codecov.io/gh/yowainwright/deep-confluence)
+
 
 ## Usage
 
