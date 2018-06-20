@@ -1,6 +1,6 @@
 /**
   deep-confluence - Merge objects—deeply 🖤
-  @version v0.0.4
+  @version v0.0.5
   @link https://github.com/yowainwright/deep-confluence#readme
   @author Jeff Wainwright <yowainwright@gmail.com> (https://jeffry.in)
   @license MIT
