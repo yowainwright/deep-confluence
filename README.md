@@ -47,7 +47,7 @@ const lonelyObj2 = {
 
 ## Fix: Deep Confluence
 
-Invoke **Deep Congluence** and merge two lonely objects deeply into 1 🖤
+Invoke **Deep Congluence** and merge two lonely objects deeply into 1. 🖤
 
 ```javascipt
 
@@ -84,5 +84,5 @@ Here's a [codepen](https://codepen.io/yowainwright/pen/MVVjOP/). Take it Deep Co
 - If you have lodash, and don't mind a little size, use [_.merge](https://www.npmjs.com/package/lodash.merge)! 
 - If you want a utility smaller than `_.merge` but more supportive than **deep-confluence** use [deepMerge](https://github.com/KyleAMathews/deepmerge/). 
 
-Deep confluence is a try it first, don't make you think about it utility.
+Deep confluence is a **"try it first, don't make you think about it"** utility.
 
