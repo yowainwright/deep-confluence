@@ -10,13 +10,20 @@ Where other deep merge utilities might take a bit to groc for the simple functio
 
 
 
-## Usage
+## Install
 
 ```shell
+
 npm i deep-confluence -D
+
 ```
 
+----
+
+## Problem: there are 2 lonely _deep_ objects
+
 ```javascript
+
 import deepConfluence from 'deep-confluence'
 
 const lonelyObj1 = {
@@ -36,9 +43,22 @@ const lonelyObj2 = {
   }
 }
 
-const youreNotAlone = deepCongluence(lonelyObj1, lonelyObj2) // 🖤🖤
+```
 
-// outputs
+## Fix: Deep Confluence
+
+Invoke **Deep Congluence** and merge two lonely objects deeply into 1. 🖤
+
+```javascipt
+
+const youreNotAlone = deepCongluence(lonelyObj1, lonelyObj2)
+
+```
+
+Which outputs
+
+```javascript
+
 {
   'alone': false,
   'broken': false,
@@ -55,9 +75,14 @@ const youreNotAlone = deepCongluence(lonelyObj1, lonelyObj2) // 🖤🖤
 
 ## Examples
 
-Here's a [codepen](https://codepen.io/yowainwright/pen/MVVjOP/). Try it out or use the Codepen to point out issues or request features.
+Here's a [codepen](https://codepen.io/yowainwright/pen/MVVjOP/). Take it Deep Confluence for a test drive. Feel free to use the example to point out issues or request features.
 
-**Note:** Deep Confluence's goal is simplicity! If you have lodash, and don't mind a little size, use [_.merge](https://www.npmjs.com/package/lodash.merge)! If you want a smaller than `_.merge` but more supportive than **deep-confluence** use [deepMerge](https://github.com/KyleAMathews/deepmerge/). Deep confluence is a try it first, don't make you think about it utility.
+---
 
-----
+**Note:** Deep Confluence's goal is simplicity! 
+
+- If you have lodash, and don't mind a little size, use [_.merge](https://www.npmjs.com/package/lodash.merge)! 
+- If you want a utility smaller than `_.merge` but more supportive than **deep-confluence** use [deepMerge](https://github.com/KyleAMathews/deepmerge/). 
+
+Deep confluence is a **"try it first, don't make you think about it"** utility.
 
