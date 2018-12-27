@@ -12,7 +12,7 @@
   *
   * @param {obj} obj
   */
-const isMergeable = (obj) => Array.isArray(obj) || (obj !== null && typeof obj === 'object' && !(o.then instanceof Function))
+const isMergeable = (obj) => obj !== null && typeof obj === 'object' && !(obj.then instanceof Function)
 
 /**
  * @param {obj}
@@ -20,10 +20,8 @@ const isMergeable = (obj) => Array.isArray(obj) || (obj !== null && typeof obj =
 */
 export default function deepConfluence(obj = {}, ...args) {
   // the initial object must be an object
-  if (Array.isArray(obj) || !isMergeable(obj)) return
+  if (!isMergeable(obj)) return
   args.forEach(item => {
-    // skip items that aren't mergeable
-    if (!isMergeable(item)) continue
     for (const key in item) {
       const piece = item[key]
       obj[key] = typeof piece === 'object'
