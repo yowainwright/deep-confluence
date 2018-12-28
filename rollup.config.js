@@ -1,5 +1,5 @@
 import babel from 'rollup-plugin-babel'
-import uglify from 'rollup-plugin-uglify'
+import { uglify } from 'rollup-plugin-uglify'
 import {
   author,
   description,
@@ -42,17 +42,24 @@ const ensureArray = maybeArr =>
   Array.isArray(maybeArr) ? maybeArr : [maybeArr]
 
 const createConfig = ({ input, output, env } = {}) => {
+  const plugins = [
+    babel(babelSetup),
+  ]
+
+  if (env === 'production') plugins.push(uglify(uglifyOutput))
+
   return {
     input,
-    plugins: [
-      babel(babelSetup),
-      uglify(uglifyOutput),
-    ],
+    plugins,
     output: ensureArray(output).map(format =>
-      Object.assign({}, format, {
-        banner,
-        name,
-      })
+      Object.assign(
+        {},
+        format,
+        {
+          banner,
+          name,
+        }
+      )
     ),
   }
 }
@@ -60,6 +67,11 @@ const createConfig = ({ input, output, env } = {}) => {
 export default [
   createConfig({
     input: 'index.js',
-    output: [{ file: unpkg, format: 'umd' }, { file: module, format: 'es' }],
+    output: { file: unpkg, format: 'umd' },
+    env: 'production',
+  }),
+  createConfig({
+    input: 'index.js',
+    output: { file: module, format: 'es' },
   }),
 ]

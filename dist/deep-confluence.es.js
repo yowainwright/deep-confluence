@@ -1,8 +1,62 @@
 /**
   deep-confluence - Merge objects—deeply 🖤
-  @version v0.0.5
+  @version v1.0.0
   @link https://github.com/yowainwright/deep-confluence#readme
   @author Jeff Wainwright <yowainwright@gmail.com> (https://jeffry.in)
   @license MIT
 **/
-function _typeof(o){return(_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(o){return typeof o}:function(o){return o&&"function"==typeof Symbol&&o.constructor===Symbol&&o!==Symbol.prototype?"symbol":typeof o})(o)}function deepConfluence(){for(var o=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},e=arguments.length,t=new Array(e>1?e-1:0),n=1;n<e;n++)t[n-1]=arguments[n];return t.forEach(function(e){for(var t in e){var n=e[t];o[t]="object"===_typeof(n)?deepConfluence(o[t],n):n}}),o}export default deepConfluence;
+function _typeof(obj) {
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    _typeof = function (obj) {
+      return typeof obj;
+    };
+  } else {
+    _typeof = function (obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+  }
+
+  return _typeof(obj);
+}
+
+/**
+ * # Deep Confluence 🖤
+ * ====
+ * > Deep Confluence is a Javascript Utility Method to deeply merge objects.
+ * - meant for: legibility, simplicity, testability, and utility
+ * - not meant for: complex {object}/[array] merging with very particular needs which can easily be tested
+ * - use-case/audience: I want to use a bare-bones deep extend method that I can understand
+ * */
+
+/**
+ *
+ * @param {obj} obj
+ */
+var isMergeable = function isMergeable(obj) {
+  return obj !== null && _typeof(obj) === 'object' && !(obj.then instanceof Function);
+};
+/**
+ * @param {obj}
+ * @param {args} array
+*/
+
+
+function deepConfluence() {
+  var obj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  // the initial object must be an object
+  if (!isMergeable(obj)) return;
+
+  for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    args[_key - 1] = arguments[_key];
+  }
+
+  args.forEach(function (item) {
+    for (var key in item) {
+      var piece = item[key];
+      obj[key] = _typeof(piece) === 'object' ? deepConfluence(obj[key], piece) : piece;
+    }
+  });
+  return obj;
+}
+
+export default deepConfluence;
