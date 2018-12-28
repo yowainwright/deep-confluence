@@ -2,7 +2,7 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/yowainwright/deep-confluence.svg)](https://greenkeeper.io/)
 
-Deep Confluence is a Javascript Utility Method to deeply merge objects.
+Deep Confluence is a JavaScript Utility Method to deeply merge objects.
 
 Where other deep merge utilities might take a bit to groc for the simple function you desire, you can view Deep Confluence's few lines of code and feel at ease saying "yes" **OR** "no"—but, say "yes".
 
@@ -34,7 +34,7 @@ const lonelyObj2 = {
   }
 }
 
-const youreNotAlone = deepCongluence(lonelyObj1, lonelyObj2) // 🖤🖤
+const youreNotAlone = deepConfluence(lonelyObj1, lonelyObj2) // 🖤🖤
 
 // outputs
 {
