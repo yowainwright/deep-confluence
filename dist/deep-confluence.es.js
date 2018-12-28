@@ -1,6 +1,6 @@
 /**
   deep-confluence - Merge objects—deeply 🖤
-  @version v1.0.0
+  @version v1.0.1
   @link https://github.com/yowainwright/deep-confluence#readme
   @author Jeff Wainwright <yowainwright@gmail.com> (https://jeffry.in)
   @license MIT
@@ -26,19 +26,19 @@ function _typeof(obj) {
  * - meant for: legibility, simplicity, testability, and utility
  * - not meant for: complex {object}/[array] merging with very particular needs which can easily be tested
  * - use-case/audience: I want to use a bare-bones deep extend method that I can understand
- * */
+ */
 
 /**
- *
- * @param {obj} obj
- */
+  *
+  * @param {obj} obj
+  */
 var isMergeable = function isMergeable(obj) {
   return obj !== null && _typeof(obj) === 'object' && !(obj.then instanceof Function);
 };
 /**
  * @param {obj}
  * @param {args} array
-*/
+ */
 
 
 function deepConfluence() {
@@ -52,8 +52,8 @@ function deepConfluence() {
 
   args.forEach(function (item) {
     for (var key in item) {
-      var piece = item[key];
-      obj[key] = _typeof(piece) === 'object' ? deepConfluence(obj[key], piece) : piece;
+      var itemProperty = item[key];
+      obj[key] = _typeof(itemProperty) === 'object' ? deepConfluence(obj[key], itemProperty) : itemProperty;
     }
   });
   return obj;
