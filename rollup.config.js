@@ -5,7 +5,6 @@ import {
   description,
   homepage,
   license,
-  main,
   unpkg,
   module,
   name,

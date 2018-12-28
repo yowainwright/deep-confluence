@@ -45,6 +45,6 @@
     "rollup-plugin-uglify": "6.0.0"
   },
   "engines": {
-    "node": ">=8"
+    "node": ">=10"
   }
 }
