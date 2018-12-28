@@ -2,7 +2,7 @@
 
 # Deep Confluence  [![Greenkeeper badge](https://badges.greenkeeper.io/yowainwright/deep-confluence.svg)](https://greenkeeper.io/) [![codecov](https://codecov.io/gh/yowainwright/deep-confluence/branch/master/graph/badge.svg)](https://codecov.io/gh/yowainwright/deep-confluence)
 
-## A Javascript Utility Method to deeply merge objects
+## A JavaScript Utility Method to deeply merge objects
 
 Where other deep merge utilities might take a bit to groc for the simple function you desire, you can view Deep Confluence's few lines of code and feel at ease saying "yes" **OR** "no"—but, say "yes".
 
@@ -47,11 +47,11 @@ const lonelyObj2 = {
 
 ## Fix: Deep Confluence
 
-Invoke **Deep Congluence** and merge two lonely objects deeply into 1. 🖤
+Invoke **Deep Confluence** and merge two lonely objects deeply into 1. 🖤
 
 ```javascipt
 
-const youreNotAlone = deepCongluence(lonelyObj1, lonelyObj2)
+const youreNotAlone = deepConfluence(lonelyObj1, lonelyObj2)
 
 ```
 
@@ -71,18 +71,19 @@ Which outputs
 }
 
 ```
+
 ----
 
 ## Examples
 
-Here's a [codepen](https://codepen.io/yowainwright/pen/MVVjOP/). Take it Deep Confluence for a test drive. Feel free to use the example to point out issues or request features.
+Here's a [CodePen](https://codepen.io/yowainwright/pen/MVVjOP/). Take it Deep Confluence for a test drive. Feel free to use the example to point out issues or request features.
 
----
+----
 
-**Note:** Deep Confluence's goal is simplicity! 
+**Note:** Deep Confluence's goal is simplicity!
 
-- If you have lodash, and don't mind a little size, use [_.merge](https://www.npmjs.com/package/lodash.merge)! 
-- If you want a utility smaller than `_.merge` but more supportive than **deep-confluence** use [deepMerge](https://github.com/KyleAMathews/deepmerge/). 
+- If you have lodash, and don't mind a little size, use [_.merge](https://www.npmjs.com/package/lodash.merge)!
+- If you want a utility smaller than `_.merge` but more supportive than **deep-confluence** use [deepMerge](https://github.com/KyleAMathews/deepmerge/).
 
 Deep confluence is a **"try it first, don't make you think about it"** utility.
 
