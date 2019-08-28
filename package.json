@@ -2,7 +2,7 @@
   "name": "deep-confluence",
   "version": "1.0.1",
   "description": "Merge objects—deeply 🖤",
-  "main": "index.js",
+  "main": "dist/deep-confluence.es.js",
   "module": "dist/deep-confluence.es.js",
   "unpkg": "dist/deep-confluence.min.js",
   "scripts": {
@@ -72,6 +72,7 @@
   },
   "files": [
     "dist",
-    "index.js"
+    "src",
+    "types"
   ]
 }
