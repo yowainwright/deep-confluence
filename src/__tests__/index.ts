@@ -1,4 +1,4 @@
-import deepConfluence from '../index.js'
+import deepConfluence from '..'
 
 // current deep-extend test
 const testDeeply = [

@@ -1,5 +1,7 @@
 import babel from 'rollup-plugin-babel'
 import { uglify } from 'rollup-plugin-uglify'
+import typescript from 'rollup-plugin-typescript2'
+
 import {
   author,
   description,
@@ -43,6 +45,7 @@ const ensureArray = maybeArr =>
 
 const createConfig = ({ input, output, env } = {}) => {
   const plugins = [
+    typescript({ useTsconfigDeclarationDir: true }),
     babel(babelSetup),
   ]
 
@@ -66,12 +69,12 @@ const createConfig = ({ input, output, env } = {}) => {
 
 export default [
   createConfig({
-    input: 'index.js',
+    input: 'src/index.ts',
     output: { file: unpkg, format: 'umd' },
     env: 'production',
   }),
   createConfig({
-    input: 'index.js',
+    input: 'src/index.ts',
     output: { file: module, format: 'es' },
   }),
 ]
