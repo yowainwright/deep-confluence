@@ -24,7 +24,7 @@
     "lint": "eslint . --fix",
     "lint:ci": "eslint .",
     "start": "nvm i && npm i",
-    "test": "jest --coverage",
+    "test": "jest --config jest.jsdom.json --coverage",
     "build": "rollup --config rollup.config.ts",
     "release-ready": "npm run lint && npm run build && npm test"
   },
