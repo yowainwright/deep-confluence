@@ -68,7 +68,7 @@
     "prettier": "^1.18.2",
     "rollup": "^1.0.0",
     "rollup-plugin-babel": "^4.1.0",
-    "rollup-plugin-typescript2": "^0.24.0",
+    "rollup-plugin-typescript2": "^0.25.0",
     "rollup-plugin-uglify": "6.0.3",
     "ts-jest": "^24.0.2",
     "typescript": "^3.6.2",
