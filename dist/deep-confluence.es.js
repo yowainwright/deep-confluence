@@ -1,6 +1,6 @@
 /**
   deep-confluence - Merge objects—deeply 🖤
-  @version v1.0.1
+  @version v1.1.1
   @link https://github.com/yowainwright/deep-confluence#readme
   @author Jeff Wainwright <yowainwright@gmail.com> (https://jeffry.in)
   @license MIT
@@ -16,28 +16,22 @@
   * @name isMergeable
   * @param {obj} obj
   */
-var isMergeable = function (obj) { return obj !== null && typeof obj === 'object' && !(obj.then instanceof Function); };
+var isMergeableObject = function (obj) { return obj !== null && typeof obj === 'object'; };
 /**
  * @name deepConfluence
  * @param {obj}
  * @param {args} obj(s)
  */
-function deepConfluence(obj) {
-    if (obj === void 0) { obj = {}; }
-    var args = [];
-    for (var _i = 1; _i < arguments.length; _i++) {
-        args[_i - 1] = arguments[_i];
-    }
-    // the initial object must be an object
-    if (!isMergeable(obj))
-        return;
-    args.forEach(function (item) {
-        for (var key in item) {
-            var itemProperty = item[key];
-            obj[key] = typeof itemProperty === 'object'
-                ? deepConfluence(obj[key], itemProperty)
-                : itemProperty;
-        }
+function deepConfluence(obj, otherObj) {
+    if (!isMergeableObject(obj))
+        return null;
+    if (!isMergeableObject(otherObj))
+        return obj;
+    Object.keys(otherObj).map(function (key) {
+        var otherObjProperty = otherObj[key];
+        obj[key] = isMergeableObject(otherObjProperty)
+            ? deepConfluence(obj[key], otherObjProperty)
+            : otherObjProperty;
     });
     return obj;
 }
