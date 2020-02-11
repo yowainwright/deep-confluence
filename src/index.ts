@@ -6,13 +6,13 @@
  * - use-case/audience: I want to use a bare-bones deep extend method that I can understand
  */
 
-type MaybeObject = object | any
+type MaybeObject = object | any;
 /**
   * @name isMergeable
   * @param {obj} obj
   */
 
-const isMergeableObject = (obj: MaybeObject): boolean => obj !== null && typeof obj === 'object'
+const isMergeableObject = (obj: MaybeObject): boolean => obj !== null && typeof obj === 'object';
 
 /**
  * @name deepConfluence
@@ -20,13 +20,13 @@ const isMergeableObject = (obj: MaybeObject): boolean => obj !== null && typeof 
  * @param {args} obj(s)
  */
 export default function deepConfluence (obj: MaybeObject, otherObj: MaybeObject): object | null {
-  if (!isMergeableObject(obj)) return null
-  if (!isMergeableObject(otherObj)) return obj
+  if (!isMergeableObject(obj)) return null;
+  if (!isMergeableObject(otherObj)) return obj;
   Object.keys(otherObj).map((key) => {
-    const otherObjProperty = otherObj[key]
+    const otherObjProperty = otherObj[key];
     obj[key] = isMergeableObject(otherObjProperty)
       ? deepConfluence(obj[key], otherObjProperty)
-      : otherObjProperty
-  })
-  return obj
+      : otherObjProperty;
+  });
+  return obj;
 }
