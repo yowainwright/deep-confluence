@@ -6,29 +6,27 @@
  * - use-case/audience: I want to use a bare-bones deep extend method that I can understand
  */
 
-type $FIXME = any
+type MaybeObject = object | any
 /**
   * @name isMergeable
   * @param {obj} obj
   */
 
-const isMergeable = (obj: $FIXME) => obj !== null && typeof obj === 'object' && !(obj.then instanceof Function)
+const isMergeableObject = (obj: MaybeObject): boolean => obj !== null && typeof obj === 'object'
 
 /**
  * @name deepConfluence
  * @param {obj}
  * @param {args} obj(s)
  */
-export default function deepConfluence (obj: $FIXME = {}, ...args: $FIXME) {
-  // the initial object must be an object
-  if (!isMergeable(obj)) return
-  args.forEach((item: $FIXME) => {
-    for (const key in item) {
-      const itemProperty = item[key]
-      obj[key] = typeof itemProperty === 'object'
-        ? deepConfluence(obj[key], itemProperty)
-        : itemProperty
-    }
+export default function deepConfluence (obj: MaybeObject, otherObj: MaybeObject): object | null {
+  if (!isMergeableObject(obj)) return null
+  if (!isMergeableObject(otherObj)) return obj
+  Object.keys(otherObj).map((key) => {
+    const otherObjProperty = otherObj[key]
+    obj[key] = isMergeableObject(otherObjProperty)
+      ? deepConfluence(obj[key], otherObjProperty)
+      : otherObjProperty
   })
   return obj
 }
