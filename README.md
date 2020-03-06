@@ -1,6 +1,6 @@
 ![Deep Confluence](https://jeffry.in/deep-confluence/deep-confluence.svg)
 
-# Deep Confluence  [![Greenkeeper badge](https://badges.greenkeeper.io/yowainwright/deep-confluence.svg)](https://greenkeeper.io/) [![codecov](https://codecov.io/gh/yowainwright/deep-confluence/branch/master/graph/badge.svg)](https://codecov.io/gh/yowainwright/deep-confluence)
+# Deep Confluence   [![codecov](https://codecov.io/gh/yowainwright/deep-confluence/branch/master/graph/badge.svg)](https://codecov.io/gh/yowainwright/deep-confluence)
 
 ## A JavaScript Utility Method to deeply merge objects
 
