@@ -1,3 +1,12 @@
+## [1.2.1](https://github.com/yowainwright/deep-confluence/compare/1.2.0...1.2.1) (2020-05-05)
+
+
+### fix
+
+* adds config clean-up (#142) ([c8a27ad](https://github.com/yowainwright/deep-confluence/commit/c8a27ad27a95e6bc02d6ef1a47819860c4dd746f)), closes [#142](https://github.com/yowainwright/deep-confluence/issues/142)
+
+
+
 # [1.2.0](https://github.com/yowainwright/deep-confluence/compare/1.1.1...1.2.0) (2020-05-05)
 
 
