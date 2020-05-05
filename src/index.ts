@@ -6,18 +6,18 @@
  * - use-case/audience: I want to use a bare-bones deep extend method that I can understand
  */
 
-type Item = any
+type Item = any;
 
-const isArray = (item: Item): boolean => Array.isArray(item)
+const isArray = (item: Item): boolean => Array.isArray(item);
 
 const isObject = (item: Item): boolean =>
-  item !== null && typeof item === 'object' && !isArray(item)
+  item !== null && typeof item === 'object' && !isArray(item);
 
 const filterArray = (arr: Item) =>
   arr.filter(
     (item: unknown, index: number, self: unknown[]) =>
       self.indexOf(item) === index
-  )
+  );
 
 /**
  * @name deepConfluence
@@ -29,25 +29,25 @@ export default function deepConfluence(item: Item, otherItem: Item) {
     (!isObject(item) && !isArray(item)) ||
     (!isObject(otherItem) && !isArray(otherItem))
   )
-    return item
+    return item;
 
   if (isArray(item) && isArray(otherItem))
-    return filterArray([...item, ...otherItem])
+    return filterArray([...item, ...otherItem]);
 
   return filterArray([...Object.keys(item), ...Object.keys(otherItem)]).reduce(
     (acc: any, key: any) => {
       if (typeof acc[key] === 'undefined') {
-        acc[key] = otherItem[key]
+        acc[key] = otherItem[key];
       } else if (isObject(acc[key]) || isArray(acc[key])) {
-        acc[key] = deepConfluence(item[key], otherItem[key])
+        acc[key] = deepConfluence(item[key], otherItem[key]);
       } else if (
         acc[key] !== otherItem[key] &&
         typeof otherItem[key] !== 'undefined'
       ) {
-        acc[key] = otherItem[key]
+        acc[key] = otherItem[key];
       }
-      return acc
+      return acc;
     },
     item
-  )
+  );
 }
