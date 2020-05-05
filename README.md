@@ -80,9 +80,17 @@ Feel free to use the example to point out issues or request features.
 
 ---
 
-**Note:** Deep Confluence's goal is simplicity!
+## Simplicity
+
+Deep Confluence's goal is simplicity!
 
 - If you have lodash, and don't mind a little size, use [\_.merge](https://www.npmjs.com/package/lodash.merge)!
 - If you want a utility smaller than `_.merge` but more supportive than **deep-confluence** use [deepMerge](https://github.com/KyleAMathews/deepmerge/).
 
 Deep confluence is a **"try it first, don't make you think about it"** utility.
+
+---
+
+## Known Issues
+
+Deep Confluence does simple Array diffing using filter to get rid of duplicate items. However, if there is an array of Objects, the arrays are merged but duplicate objects are not removed. That can be done by you with custom filtering at your leisure.

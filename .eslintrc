@@ -1,3 +1,7 @@
 {
-  "extends": "@heartly/eslint-config"
+  "extends": "@heartly/eslint-config-typescript",
+  "globals": {
+    "expect": true,
+    "test": true
+  }
 }
