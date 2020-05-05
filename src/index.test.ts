@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import deepConfluence from '.';
+=======
+import deepConfluence from '.'
+>>>>>>> 94b7defaa882c57279583961092e0cb3d32fa78b
 
 // current deep-extend test
 const testDeeply = [
@@ -123,6 +127,7 @@ const testDeeply = [
       },
     },
   },
+<<<<<<< HEAD
 ];
 
 testDeeply.forEach((obj) => {
@@ -131,3 +136,13 @@ testDeeply.forEach((obj) => {
     expect(result).toEqual(obj.expected);
   });
 });
+=======
+]
+
+testDeeply.forEach((obj) => {
+  test(`deep-extend, test ${obj}`, () => {
+    const result = deepConfluence(obj.lonelyObj1, obj.lonelyObj2)
+    expect(result).toEqual(obj.expected)
+  })
+})
+>>>>>>> 94b7defaa882c57279583961092e0cb3d32fa78b
