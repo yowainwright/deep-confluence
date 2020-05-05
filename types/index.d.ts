@@ -5,11 +5,14 @@
  * - not meant for: complex {object}/[array] merging with very particular needs which can easily be tested
  * - use-case/audience: I want to use a bare-bones deep extend method that I can understand
  */
-declare type MaybeObject = object | any;
+declare type MaybeObject = object | any
 /**
  * @name deepConfluence
  * @param {obj}
  * @param {args} obj(s)
  */
-export default function deepConfluence(obj: MaybeObject, otherObj: MaybeObject): object | null;
-export {};
+export default function deepConfluence(
+  obj: MaybeObject,
+  otherObj: MaybeObject
+): object | null
+export {}
