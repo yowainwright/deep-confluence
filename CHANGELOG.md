@@ -1,3 +1,12 @@
+## [1.2.2](https://github.com/yowainwright/deep-confluence/compare/1.2.1...1.2.2) (2020-05-06)
+
+
+### fix
+
+* updates badges (#144) ([c68b60c](https://github.com/yowainwright/deep-confluence/commit/c68b60c2cc9eebbdf9296dd7d139f07f28e862a9)), closes [#144](https://github.com/yowainwright/deep-confluence/issues/144)
+
+
+
 ## [1.2.1](https://github.com/yowainwright/deep-confluence/compare/1.2.0...1.2.1) (2020-05-05)
 
 
