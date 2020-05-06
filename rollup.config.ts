@@ -36,7 +36,7 @@ const banner = `/**
 const ensureArray = (maybeArr) =>
   Array.isArray(maybeArr) ? maybeArr : [maybeArr]
 
-const createConfig = ({ input, output, env } = {}) => {
+const createConfig = ({ input, output, env }) => {
   const plugins = [typescript({ useTsconfigDeclarationDir: true })]
 
   if (env === 'production') plugins.push(uglify(uglifyOutput))
@@ -62,5 +62,6 @@ export default [
   createConfig({
     input: 'src/index.ts',
     output: { file: module, format: 'es' },
+    env: 'common',
   }),
 ]
