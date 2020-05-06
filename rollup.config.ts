@@ -33,6 +33,9 @@ const banner = `/**
   @license ${license}
 **/`
 
+const ensureArray = (maybeArr) =>
+  Array.isArray(maybeArr) ? maybeArr : [maybeArr]
+
 const createConfig = ({ input, output, env }) => {
   const plugins = [typescript({ useTsconfigDeclarationDir: true })]
 
@@ -41,7 +44,7 @@ const createConfig = ({ input, output, env }) => {
   return {
     input,
     plugins,
-    output: output.map((format) =>
+    output: ensureArray(output).map((format) =>
       Object.assign({}, format, {
         banner,
         name,
