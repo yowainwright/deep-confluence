@@ -1,6 +1,6 @@
 {
   "name": "deep-confluence",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Merge objects—deeply 🖤",
   "main": "dist/deep-confluence.es.js",
   "module": "dist/deep-confluence.es.js",
@@ -68,9 +68,11 @@
     "node": ">=10"
   },
   "files": [
-    "dist",
-    "src",
-    "types"
+    "dist/deep-confluence.es.js",
+    "dist/deep-confluence.min.js",
+    "src/index.ts",
+    "types/index.d.ts",
+    "LICENSE"
   ],
   "jest": {
     "transform": {

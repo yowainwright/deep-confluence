@@ -33,10 +33,7 @@ const banner = `/**
   @license ${license}
 **/`
 
-const ensureArray = (maybeArr) =>
-  Array.isArray(maybeArr) ? maybeArr : [maybeArr]
-
-const createConfig = ({ input, output, env } = {}) => {
+const createConfig = ({ input, output, env }) => {
   const plugins = [typescript({ useTsconfigDeclarationDir: true })]
 
   if (env === 'production') plugins.push(uglify(uglifyOutput))
@@ -44,7 +41,7 @@ const createConfig = ({ input, output, env } = {}) => {
   return {
     input,
     plugins,
-    output: ensureArray(output).map((format) =>
+    output: output.map((format) =>
       Object.assign({}, format, {
         banner,
         name,
@@ -62,5 +59,6 @@ export default [
   createConfig({
     input: 'src/index.ts',
     output: { file: module, format: 'es' },
+    env: 'production',
   }),
 ]
