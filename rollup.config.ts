@@ -62,6 +62,6 @@ export default [
   createConfig({
     input: 'src/index.ts',
     output: { file: module, format: 'es' },
-    env: 'production',
+    env: 'common',
   }),
 ]
