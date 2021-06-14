@@ -55,7 +55,7 @@
     "eslint": "^7.4.0",
     "husky": "^4.0.2",
     "jest": "^25.5.3",
-    "lint-staged": "^10.2.2",
+    "lint-staged": "^11.0.0",
     "prettier": "^2.0.5",
     "rollup": "^1.27.13",
     "rollup-plugin-babel": "^4.1.0",
