@@ -36,7 +36,9 @@ export default function deepConfluence(item: Item, otherItem: Item) {
 
   return filterArray([...Object.keys(item), ...Object.keys(otherItem)]).reduce(
     (acc: any, key: any) => {
-      if (typeof acc[key] === 'undefined') {
+      if (key === '__proto__') {
+        acc = otherItem
+      } else if (typeof acc[key] === 'undefined') {
         acc[key] = otherItem[key]
       } else if (isObject(acc[key]) || isArray(acc[key])) {
         acc[key] = deepConfluence(item[key], otherItem[key])

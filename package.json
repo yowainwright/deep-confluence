@@ -1,6 +1,6 @@
 {
   "name": "deep-confluence",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Merge objects—deeply 🖤",
   "main": "dist/deep-confluence.es.js",
   "module": "dist/deep-confluence.es.js",
@@ -47,7 +47,7 @@
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
     "@commitlint/prompt": "^11.0.0",
-    "@heartly/eslint-config-typescript": "^0.0.2",
+    "@heartly/eslint-config-typescript": "^1.0.4",
     "@types/jest": "^27.0.0",
     "codecov": "^3.1.0",
     "commitizen": "^4.1.2",
