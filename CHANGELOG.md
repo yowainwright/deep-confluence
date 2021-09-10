@@ -1,3 +1,12 @@
+## [1.2.3](https://github.com/yowainwright/deep-confluence/compare/1.2.2...1.2.3) (2021-09-10)
+
+
+### fix
+
+* fixes prototype pollution issue, I think 🙏 (#221) ([9dda9a6](https://github.com/yowainwright/deep-confluence/commit/9dda9a6ed93cdf0f2f8ad8747c8721c7c9fe3c3f)), closes [#221](https://github.com/yowainwright/deep-confluence/issues/221)
+
+
+
 ## [1.2.2](https://github.com/yowainwright/deep-confluence/compare/1.2.1...1.2.2) (2020-05-06)
 
 
