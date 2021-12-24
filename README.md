@@ -5,7 +5,11 @@
 ## A JavaScript Utility Method to deeply merge objects
 
 Where other deep merge utilities might take a bit to groc for the simple function you desire,<br />
-you can view Deep Confluence's few lines of code and feel at ease saying "yes" **OR** "no"—but, say "yes".
+you can view Deep Confluence's few lines of code and feel at ease saying "yes" **OR** "no"—but, say "yes". 
+
+**Note 👋**
+
+JavaScript has [native support](https://developer.mozilla.org/en-US/docs/Web/API/structuredClone) for deep merging now (but only in certain browsers).
 
 ---
 
@@ -13,7 +17,7 @@ you can view Deep Confluence's few lines of code and feel at ease saying "yes" *
 
 ```shell
 
-yarn deep-confluence -D
+pnpm i deep-confluence -D
 
 ```
 
