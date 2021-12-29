@@ -45,7 +45,7 @@
   "homepage": "https://github.com/yowainwright/deep-confluence#readme",
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
-    "@commitlint/config-conventional": "^15.0.0",
+    "@commitlint/config-conventional": "^16.0.0",
     "@commitlint/prompt": "^15.0.0",
     "@heartly/eslint-config-typescript": "^1.0.4",
     "@types/jest": "^27.0.0",
