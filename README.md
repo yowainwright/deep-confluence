@@ -1,4 +1,4 @@
-![Deep Confluence](https://jeffry.in/deep-confluence/deep-confluence.svg)
+![Deep Confluence](https://raw.githubusercontent.com/yowainwright/deep-confluence/master/assets/deep-confluence.svg)
 
 # Deep Confluence ![Typed with TypeScript](https://flat.badgen.net/badge/icon/Typed?icon=typescript&label&labelColor=blue&color=555555) [![codecov](https://codecov.io/gh/yowainwright/deep-confluence/branch/master/graph/badge.svg)](https://codecov.io/gh/yowainwright/deep-confluence) [![npm version](https://badge.fury.io/js/deep-confluence.svg)](https://badge.fury.io/js/deep-confluence) [![unpkg](https://img.shields.io/badge/unpkg-link-blue.svg)](https://unpkg.com/deep-confluence@latest/dist/deep-confluence.min.js)
 
