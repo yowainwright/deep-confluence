@@ -6119,9 +6119,9 @@ snapdragon@^0.8.1:
     use "^3.1.0"
 
 snyk@^1.316.1:
-  version "1.704.0"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.704.0.tgz#b0147971abbfc299feb6dd74f80e06809716b79b"
-  integrity sha512-vYt8Zp2O5Rce//JAqkivWKTSEGvSIvFMEPy6UM2tCUfRoQdk+398YP0l1yLsGfu8in4Q9A7H+Vy3om4fcFliYQ==
+  version "1.1024.0"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.1024.0.tgz#f9ff2c8660da9cda34ea5807ee8731164b94ab0a"
+  integrity sha512-j0Hk/6kVV4pah3TwnhDCHEDnnIK+SkSYp6F/krz0Z+KfvG0fz3nORuufevjCV1ErIvcuZAnqQdRUVBPYTwfS6g==
 
 source-map-resolve@^0.5.0:
   version "0.5.3"
