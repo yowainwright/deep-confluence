@@ -344,7 +344,7 @@
     "@commitlint/rules" "^17.4.4"
     "@commitlint/types" "^17.4.4"
 
-"@commitlint/load@>6.1.1", "@commitlint/load@^17.4.4", "@commitlint/load@^17.5.0":
+"@commitlint/load@>6.1.1", "@commitlint/load@^17.5.0":
   version "17.5.0"
   resolved "https://registry.yarnpkg.com/@commitlint/load/-/load-17.5.0.tgz#be45dbbb50aaf5eb7e8e940e1e0d6171d1426bab"
   integrity sha512-l+4W8Sx4CD5rYFsrhHH8HP01/8jEP7kKf33Xlx2Uk2out/UKoKPYMOIRcDH5ppT8UXLMV+x6Wm5osdRKKgaD1Q==
@@ -379,12 +379,12 @@
     conventional-commits-parser "^3.2.2"
 
 "@commitlint/prompt@^17.0.3":
-  version "17.4.4"
-  resolved "https://registry.yarnpkg.com/@commitlint/prompt/-/prompt-17.4.4.tgz#22eb84bb1d51e6580259e63edbc433cdf8ae0090"
-  integrity sha512-qWC2fydBnAQp+jJqoPYLzzQ6NFMBNm/GlP+oeYOHhMwCXl9nptDGXUJnW3cdL6G4QMYKqJv1czRfATzMXHDHcg==
+  version "17.5.0"
+  resolved "https://registry.yarnpkg.com/@commitlint/prompt/-/prompt-17.5.0.tgz#b135f47aaddbe219754433f2584bfe0e80a74f6c"
+  integrity sha512-UVgGj5/VYydaLaEGw3GMgBrG+vlS0OKt6hih5vkAu74KMGtUxWT7ACE/VTDuZtMv4u/bew9f6GgOr6LKIhqGng==
   dependencies:
     "@commitlint/ensure" "^17.4.4"
-    "@commitlint/load" "^17.4.4"
+    "@commitlint/load" "^17.5.0"
     "@commitlint/types" "^17.4.4"
     chalk "^4.1.0"
     inquirer "^6.5.2"
